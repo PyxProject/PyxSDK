@@ -2,6 +2,11 @@
 
 namespace pyx {
 
+	namespace Extensions
+	{
+		class IExtensionsContext;
+	} ///< Memory
+
 	namespace Memory
 	{
 		class IMemoryContext;
@@ -29,6 +34,9 @@ namespace pyx {
 
 		/// Return the Pyx GraphicsContext
 		virtual Graphics::IGraphicsContext& GetGraphicsContext() = 0;
+
+		/// Return the Pyx ExtensionsContext
+		virtual Extensions::IExtensionsContext& GetExtensionsContext() = 0;
 
 	};
 
